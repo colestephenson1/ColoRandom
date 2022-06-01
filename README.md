@@ -14,12 +14,15 @@
   - [Project Specs](#project-specs)
 ## Introduction
   - The purpose of this project was to ...
+
 ## Technologies
   - Javascript
   - HTML
   - CSS
+
 ## Illustrations
-  ![Wireframe Drawing](https://imgur.com/a/vmAFASX)
+  ![Wireframe Drawing](https://excalidraw.com/#json=RSRqT2BQFCt19kt1N3Cpt,8wv-cqBm6Ya4TpNEFt6mVA)
+
 ## Features
 - 
 - 
@@ -35,13 +38,14 @@ Visit our published ColoRandoM Site! [here](https:)
 3. View the project in the browser by running open index.html in your terminal.
 ## Sources
   - [MDN](http://developer.mozilla.org/en-US/)
-  -[JavaTPoint](https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript)
-  -[YouTube](https://www.youtube.com/)
+  - [YouTube](https://www.youtube.com/)
   - [W3Schools](https://www.w3schools.com/)
+
 ## Contributors
- - []()
- - []()
- - []()
- - []()
+ - [Cole Stephenson](https://github.com/colestephenson1)
+ - [Connor Corcoran](https://github.com/Connorcorc)
+ - [Cleveland Ticoalu](https://github.com/cleveland231)
+ - [Andrew Miller](https://github.com/andrewmiller45)
+
 ## Project Specs
   - The project spec & rubric can be found ![here](https://frontend.turing.edu/projects/module-1/colorandom-v2.html)
