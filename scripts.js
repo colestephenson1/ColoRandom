@@ -10,38 +10,39 @@ var paletteContainer = document.querySelector('.palette-container')
 var palette = new Palette();
 var color = new Color();
 
-window.addEventListener('load', displayPaletteTest);
-newPaletteButton.addEventListener('click', displayPaletteTest);
+window.addEventListener('load', displayNewPalette);
+newPaletteButton.addEventListener('click', displayNewPalette);
 paletteContainer.addEventListener('click', lockColor);
 
 
-function paletteTest() {
-palette.newColorInstance();
-palette.newColorInstance();
-palette.newColorInstance();
-palette.newColorInstance();
-palette.newColorInstance();
+function paletteGenerator() {
+  palette.newColorInstance(5);
 };
 
-function displayPaletteTest(){
-  paletteTest();
+function displayNewPalette(){
+  if(palette.colors.length !== 0) {
+    palette.colors = [];
+  };
+paletteGenerator();
   for(var i = 0; i < palette.colors.length; i++) {
     colorBoxes[i].style.background = palette.colors[i].hexCode;
     hexCodes[i].innerText = palette.colors[i].hexCode;
     lockAndUnlockIcon[i].id = palette.colors[i].hexCode;
-  } console.log(palette);
+  }; console.log(palette);
 };
+
 
 
 function lockColor(e){
   for (let i = 0; i < palette.colors.length; i++) {
     if (palette.colors[i].hexCode === e.target.id) {
       palette.colors[i].toggleLock();
-} if (palette.colors[i].locked === true) {
-  lockAndUnlockIcon[i].src ="./assets/lock-icon.svg"
-} else {
-  lockAndUnlockIcon[i].src="./assets/unlock-icon.svg"
-};
+    }
+    if (palette.colors[i].locked === true) {
+      lockAndUnlockIcon[i].src ="./assets/lock-icon.svg"
+    } else {
+      lockAndUnlockIcon[i].src="./assets/unlock-icon.svg"
+    };
   };
 };
 //event listener on the box-info - look for a click
