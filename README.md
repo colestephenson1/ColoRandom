@@ -21,7 +21,7 @@
   - CSS
 
 ## Illustrations
-  ![Wireframe Drawing](https://excalidraw.com/#json=RSRqT2BQFCt19kt1N3Cpt,8wv-cqBm6Ya4TpNEFt6mVA)
+  ![Excalidraw](https://excalidraw.com/#json=Ne5t48nODZKeReq-sQmCp,wQB1dUYyjoPyTvTmurQozw)
 
 ## Features
 - 
