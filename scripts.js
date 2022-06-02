@@ -45,9 +45,3 @@ function lockColor(e){
     };
   };
 };
-//event listener on the box-info - look for a click
-//match the hexcode from Color to the id of the hex-code class.
-//find hex-code id via e.target
-
-//when lock button is clicked, toggle the icon.
-//
