@@ -53,15 +53,6 @@ h1 {
   height: 100px;
   /* background-color: black; */
 }
-
-/* .color-container {
-
-}
-
-.hex-code {
-  text-align: center;
-} */
-
 .box-info {
   display: flex;
 	flex-direction: row;
