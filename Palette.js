@@ -9,7 +9,7 @@ class Palette {
     this.colors = [];
   };
   newColorInstance() {
-  var newColor = new Color(randomHex());
-  this.colors.push(newColor);
+    var newColor = new Color(randomHex());
+    this.colors.push(newColor);
   };
 };
