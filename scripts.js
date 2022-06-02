@@ -20,18 +20,14 @@ function paletteGenerator() {
 };
 
 function displayNewPalette(){
-  if(palette.colors.length !== 0) {
-    palette.colors = [];
+  shuffleColor()
+  paletteGenerator();
+    for(var i = 0; i < palette.colors.length; i++) {
+      colorBoxes[i].style.background = palette.colors[i].hexCode;
+      hexCodes[i].innerText = palette.colors[i].hexCode;
+      lockAndUnlockIcon[i].id = palette.colors[i].hexCode;
+    }; 
   };
-paletteGenerator();
-  for(var i = 0; i < palette.colors.length; i++) {
-    colorBoxes[i].style.background = palette.colors[i].hexCode;
-    hexCodes[i].innerText = palette.colors[i].hexCode;
-    lockAndUnlockIcon[i].id = palette.colors[i].hexCode;
-  }; console.log(palette);
-};
-
-
 
 function lockColor(e){
   for (let i = 0; i < palette.colors.length; i++) {
@@ -45,3 +41,12 @@ function lockColor(e){
     };
   };
 };
+
+function shuffleColor(){
+  for (let i = 0; i < palette.colors.length; i++) {
+    if (!palette.colors[i].locked) {
+      var shuffleColor = palette.shuffleColorInstance()
+      palette.colors.splice(i, 1, shuffleColor)
+    }   
+  }
+}
