@@ -21,7 +21,7 @@
   - CSS
 
 ## Illustrations
-  ![Excalidraw](https://excalidraw.com/#json=Ne5t48nODZKeReq-sQmCp,wQB1dUYyjoPyTvTmurQozw)
+- [Excalidraw](https://excalidraw.com/#json=Ne5t48nODZKeReq-sQmCp,wQB1dUYyjoPyTvTmurQozw)
 
 ## Features
 - 
