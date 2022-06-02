@@ -1,7 +1,6 @@
 class Color {
     constructor(randomNum){
         this.hexCode = randomNum;
-        // this.id = randomNum;
         this.locked = false;
     };
     toggleLock(){
