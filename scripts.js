@@ -36,16 +36,17 @@ function displayPaletteTest(){
 function lockColor(e){
   for (let i = 0; i < palette.colors.length; i++) {
     if (palette.colors[i].hexCode === e.target.id) {
-      palette.colors[i].toggleLock()
-      
-      console.log(palette);
-    }  
-  }
+      palette.colors[i].toggleLock();
+} if (palette.colors[i].locked === true) {
+  lockAndUnlockIcon[i].src ="./assets/lock-icon.svg"
+} else {
+  lockAndUnlockIcon[i].src="./assets/unlock-icon.svg"
+};
+  };
+};
 //event listener on the box-info - look for a click
 //match the hexcode from Color to the id of the hex-code class.
 //find hex-code id via e.target
 
 //when lock button is clicked, toggle the icon.
 //
-
-}
