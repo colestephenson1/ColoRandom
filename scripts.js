@@ -6,10 +6,13 @@ var savePaletteButton = document.querySelector('.save-palette-button');
 var lockAndUnlockIcon = document.querySelectorAll('.unlock-icon');
 var paletteContainer = document.querySelector('.palette-container');
 var miniColorBoxes = document.querySelectorAll('.mini-color-box');
+var savedPaletteSection = document.querySelector('.saved-palettes');
+var miniColorContainer = document.querySelector('.mini-color-container')
 
 //global variables
 var palette = new Palette();
 var color = new Color();
+var paletteToSave = [];
 
 //event listeners
 window.addEventListener('load', displayNewPalette);
@@ -19,6 +22,7 @@ savePaletteButton.addEventListener('click', savePalette);
 
 //functions
 function paletteGenerator() {
+  palette = new Palette;
   palette.newColorInstance(5);
 };
 
@@ -55,18 +59,35 @@ function shuffleColor() {
   };
 };
 
-function savePalette() {
-  var paletteToSave = [];
-  for (var i = 0; i < palette.colors.length; i++) {
-    paletteToSave.push(palette.colors[i].hexCode);
-  };
-  renderSavedPalette(paletteToSave);
-  console.log(paletteToSave);
-};
+function addNewMiniBox() {
+  miniColorContainer.innerHTML = "";
+  var newMiniBox =
+  `<div class="mini-color-container">
+    <div class="mini-color-box" style="background: ${palette.colors[0].hexCode};">
+    </div>
+    <div class="mini-color-box" style="background: ${palette.colors[1].hexCode};">
+    </div>
+    <div class="mini-color-box" style="background: ${palette.colors[2].hexCode};">
+    </div>
+    <div class="mini-color-box" style="background: ${palette.colors[3].hexCode};">
+    </div>
+    <div class="mini-color-box" style="background: ${palette.colors[4].hexCode};">
+    </div>
+    <img id="trashIcon" src="assets/trash-can-icon.svg">
+    `
 
-function renderSavedPalette(savedPalette) {
-  console.log(savedPalette);
-  for (var i = 0; i < savedPalette.length; i++) {
-    miniColorBoxes[i].style.background = savedPalette[i];
-  };
-};
+  savedPaletteSection.innerHTML += newMiniBox;
+
+}
+
+
+function savePalette() {
+  if (!paletteToSave.includes(palette))
+  paletteToSave.push(palette)
+  console.log(paletteToSave)
+  for (var i = 0; i < palette.colors.length; i++) {
+  miniColorBoxes[i].style.background = palette.colors[i].hexCode;
+  }
+  addNewMiniBox();
+
+}
