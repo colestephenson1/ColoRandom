@@ -59,8 +59,12 @@ h2 {
 }
 
 .mini-color-box {
-  width: 18px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
+  border: solid black;
+  border-width: medium;
+
+
 }
 
 .mini-color-container {
@@ -87,7 +91,7 @@ h2 {
   width: 700px;
 }
 
-.unlock-icon, .lock-icon, .trash-can-icon {
+.unlock-icon, .lock-icon {
   height: 15px;
   width: 15px;
 }
@@ -99,10 +103,17 @@ h2 {
 }
 
 
-.new-palette-button:hover, .save-palette-button:hover {
+.new-palette-button:hover, .save-palette-button:hover, #trashIcon:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
+
+
 
 .hidden {
 	display: none;
   }
+
+ #trashIcon {
+   width: 30px;
+   height: 30px;
+ }

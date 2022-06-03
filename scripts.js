@@ -58,7 +58,6 @@ function shuffleColor() {
 };
 
 function addNewMiniBox() {
-  miniColorContainer.innerHTML = "";
   var newMiniBox =
   `<div class="mini-color-container">
     <div class="mini-color-box" style="background: ${palette.colors[0].hexCode};">
@@ -73,19 +72,17 @@ function addNewMiniBox() {
     </div>
     <img id="trashIcon" src="assets/trash-can-icon.svg">
     `
-
-  savedPaletteSection.innerHTML += newMiniBox;
+    savedPaletteSection.innerHTML += newMiniBox;
 
 }
 
 
 function savePalette() {
-  if (!paletteToSave.includes(palette))
-  paletteToSave.push(palette)
-  console.log(paletteToSave)
-  for (var i = 0; i < palette.colors.length; i++) {
-  miniColorBoxes[i].style.background = palette.colors[i].hexCode;
+  if (palette.isSaved) {
+    return;
   }
+  paletteToSave.push(palette);
+  palette.changeSavedState();
   addNewMiniBox();
 
 }
