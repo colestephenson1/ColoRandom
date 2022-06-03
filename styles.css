@@ -1,7 +1,3 @@
-/* * {
-  border: solid red;
-} */
-
 
 body {
   display: flex;
@@ -11,10 +7,15 @@ body {
 	align-items: stretch;
 	align-content: stretch;
   height: 900px;
+  font-family: 'Comic Sans', monospace;
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 40px;
 }
 
 .main-container {
@@ -32,33 +33,34 @@ h1 {
   display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	align-content: center;
   width: 30%;
+  border-left: solid black;
+  border-width: medium;
 }
 
 .palette-container {
   display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
 	align-content: center;
-  width: 700px;
+  width: 1000px;
 }
 
 .color-box {
-  width: 100px;
-  height: 100px;
-  /* background-color: black; */
+  width: 150px;
+  height: 150px;
+  border: solid black;
+  border-width: medium;
 }
 
 .mini-color-box {
   width: 18px;
   height: 18px;
-  /* background-color: black; */
-
 }
 
 .mini-color-container {
@@ -88,6 +90,12 @@ h1 {
 .unlock-icon, .lock-icon, .trash-can-icon {
   height: 15px;
   width: 15px;
+}
+
+.new-palette-button, .save-palette-button {
+  font-family: 'Comic Sans', monospace;
+  font-size: 20px;
+  box-shadow: 3px 3px;
 }
 
 .hidden {
