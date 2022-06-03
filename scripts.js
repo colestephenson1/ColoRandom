@@ -30,9 +30,7 @@ function displayNewPalette() {
   shuffleColor();
   paletteGenerator();
     for(var i = 0; i < palette.colors.length; i++) {
-      colorBoxes[i].style.background = palette.colors[i].hexCode;
-      hexCodes[i].innerText = palette.colors[i].hexCode;
-      lockAndUnlockIcon[i].id = palette.colors[i].hexCode;
+      colorBoxes[i].style.background = hexCodes[i].innerText = lockAndUnlockIcon[i].id  = palette.colors[i].hexCode;
     };
   console.log(palette);
 };
