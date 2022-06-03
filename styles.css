@@ -98,6 +98,11 @@ h2 {
   box-shadow: 3px 3px;
 }
 
+
+.new-palette-button:hover, .save-palette-button:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
 .hidden {
 	display: none;
   }
