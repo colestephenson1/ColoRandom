@@ -13,9 +13,8 @@ class Palette {
     };
   };
 
-  shuffleColorInstance(){
+  shuffleColorInstance() {
     var newColor = new Color();
     return newColor
   };
-
 };
