@@ -6,6 +6,7 @@ var savePaletteButton = document.querySelector('.save-palette-button');
 var lockAndUnlockIcon = document.querySelectorAll('.unlock-icon');
 var boxInfo = document.querySelector('.box-info')
 var paletteContainer = document.querySelector('.palette-container')
+var miniColorBoxes = document.querySelectorAll('.mini-color-box')
 
 var palette = new Palette();
 var color = new Color();
@@ -13,6 +14,7 @@ var color = new Color();
 window.addEventListener('load', displayNewPalette);
 newPaletteButton.addEventListener('click', displayNewPalette);
 paletteContainer.addEventListener('click', lockColor);
+savePaletteButton.addEventListener('click', savePalette)
 
 
 function paletteGenerator() {
@@ -26,7 +28,8 @@ function displayNewPalette(){
       colorBoxes[i].style.background = palette.colors[i].hexCode;
       hexCodes[i].innerText = palette.colors[i].hexCode;
       lockAndUnlockIcon[i].id = palette.colors[i].hexCode;
-    }; 
+    };
+    console.log(palette)
   };
 
 function lockColor(e){
@@ -47,6 +50,22 @@ function shuffleColor(){
     if (!palette.colors[i].locked) {
       var shuffleColor = palette.shuffleColorInstance()
       palette.colors.splice(i, 1, shuffleColor)
-    }   
+    }
+  }
+}
+
+function savePalette() {
+  var paletteToSave = []
+  for (var i = 0; i < palette.colors.length; i++) {
+    paletteToSave.push(palette.colors[i].hexCode)
+  }
+  renderSavedPalette(paletteToSave);
+  console.log(paletteToSave)
+}
+
+function renderSavedPalette(savedPalette) {
+  console.log(savedPalette)
+for (var i = 0; i < savedPalette.length; i++) {
+  miniColorBoxes[i].style.background = savedPalette[i]
   }
 }
