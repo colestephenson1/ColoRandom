@@ -85,12 +85,7 @@ h1 {
   width: 700px;
 }
 
-.unlock-icon {
-  height: 15px;
-  width: 15px;
-}
-
-.lock-icon {
+.unlock-icon, .lock-icon, .trash-can-icon {
   height: 15px;
   width: 15px;
 }

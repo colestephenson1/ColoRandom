@@ -6,10 +6,10 @@ var savePaletteButton = document.querySelector('.save-palette-button');
 var lockAndUnlockIcon = document.querySelectorAll('.unlock-icon');
 var paletteContainer = document.querySelector('.palette-container');
 var miniColorBoxes = document.querySelectorAll('.mini-color-box');
+// var trashCanIcon = document.querySelector('.trash-can-icon');
 
 //global variables
 var palette = new Palette();
-var color = new Color();
 
 //event listeners
 window.addEventListener('load', displayNewPalette);
@@ -26,9 +26,7 @@ function displayNewPalette() {
   shuffleColor();
   paletteGenerator();
     for(var i = 0; i < palette.colors.length; i++) {
-      colorBoxes[i].style.background = palette.colors[i].hexCode;
-      hexCodes[i].innerText = palette.colors[i].hexCode;
-      lockAndUnlockIcon[i].id = palette.colors[i].hexCode;
+      colorBoxes[i].style.background = hexCodes[i].innerText = lockAndUnlockIcon[i].id  = palette.colors[i].hexCode;
     };
   console.log(palette);
 };
@@ -65,7 +63,6 @@ function savePalette() {
 };
 
 function renderSavedPalette(savedPalette) {
-  console.log(savedPalette);
   for (var i = 0; i < savedPalette.length; i++) {
     miniColorBoxes[i].style.background = savedPalette[i];
   };
