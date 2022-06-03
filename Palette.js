@@ -2,6 +2,7 @@ class Palette {
   constructor() {
     this.id = Date.now();
     this.colors = [];
+    this.isSaved = false;
   };
 
   newColorInstance(colorCount) {
@@ -17,4 +18,8 @@ class Palette {
     var newColor = new Color();
     return newColor
   };
+
+  changeSavedState() {
+    this.isSaved = true;
+  }
 };
