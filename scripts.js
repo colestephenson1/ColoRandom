@@ -4,33 +4,34 @@ var hexCodes = document.querySelectorAll('.hex-code');
 var newPaletteButton = document.querySelector('.new-palette-button');
 var savePaletteButton = document.querySelector('.save-palette-button');
 var lockAndUnlockIcon = document.querySelectorAll('.unlock-icon');
-var boxInfo = document.querySelector('.box-info');
 var paletteContainer = document.querySelector('.palette-container');
 var miniColorBoxes = document.querySelectorAll('.mini-color-box');
 
+//global variables
 var palette = new Palette();
 var color = new Color();
 
+//event listeners
 window.addEventListener('load', displayNewPalette);
 newPaletteButton.addEventListener('click', displayNewPalette);
 paletteContainer.addEventListener('click', lockColor);
-savePaletteButton.addEventListener('click', savePalette)
+savePaletteButton.addEventListener('click', savePalette);
 
-
+//functions
 function paletteGenerator() {
   palette.newColorInstance(5);
 };
 
 function displayNewPalette() {
-  shuffleColor()
+  shuffleColor();
   paletteGenerator();
     for(var i = 0; i < palette.colors.length; i++) {
       colorBoxes[i].style.background = palette.colors[i].hexCode;
       hexCodes[i].innerText = palette.colors[i].hexCode;
       lockAndUnlockIcon[i].id = palette.colors[i].hexCode;
     };
-    console.log(palette)
-  };
+  console.log(palette);
+};
 
 function lockColor(e) {
   for (let i = 0; i < palette.colors.length; i++) {
@@ -48,19 +49,19 @@ function lockColor(e) {
 function shuffleColor() {
   for (let i = 0; i < palette.colors.length; i++) {
     if (!palette.colors[i].locked) {
-      var shuffleColor = palette.shuffleColorInstance()
-      palette.colors.splice(i, 1, shuffleColor)
+      var shuffleColor = palette.shuffleColorInstance();
+      palette.colors.splice(i, 1, shuffleColor);
     };
   };
 };
 
 function savePalette() {
-  var paletteToSave = []
+  var paletteToSave = [];
   for (var i = 0; i < palette.colors.length; i++) {
     paletteToSave.push(palette.colors[i].hexCode);
   };
   renderSavedPalette(paletteToSave);
-  console.log(paletteToSave)
+  console.log(paletteToSave);
 };
 
 function renderSavedPalette(savedPalette) {
