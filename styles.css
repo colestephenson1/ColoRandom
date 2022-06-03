@@ -53,9 +53,22 @@ h1 {
   height: 100px;
   /* background-color: black; */
 }
+
+.mini-color-box {
+  width: 18px;
+  height: 18px;
+  /* background-color: black; */
+
+}
+
+.mini-color-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 .box-info {
   display: flex;
-	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	align-items: center;
