@@ -22,13 +22,14 @@ savePaletteButton.addEventListener('click', savePalette);
 
 //functions
 function paletteGenerator() {
-  palette = new Palette;
+  palette.updateID();
   palette.newColorInstance(5);
 };
 
 function displayNewPalette() {
-  shuffleColor();
+  palette.resetSavedState();
   paletteGenerator();
+  shuffleColor();
     for(var i = 0; i < palette.colors.length; i++) {
       colorBoxes[i].style.background = hexCodes[i].innerText = lockAndUnlockIcon[i].id  = palette.colors[i].hexCode;
     };
@@ -60,15 +61,15 @@ function shuffleColor() {
 function addNewMiniBox() {
   var newMiniBox =
   `<div class="mini-color-container">
-    <div class="mini-color-box" style="background: ${palette.colors[0].hexCode};">
+    <div class="mini-color-box" id="0" style="background: ${palette.colors[0].hexCode};">
     </div>
-    <div class="mini-color-box" style="background: ${palette.colors[1].hexCode};">
+    <div class="mini-color-box" id="1" style="background: ${palette.colors[1].hexCode};">
     </div>
-    <div class="mini-color-box" style="background: ${palette.colors[2].hexCode};">
+    <div class="mini-color-box" id="2" style="background: ${palette.colors[2].hexCode};">
     </div>
-    <div class="mini-color-box" style="background: ${palette.colors[3].hexCode};">
+    <div class="mini-color-box" id="3" style="background: ${palette.colors[3].hexCode};">
     </div>
-    <div class="mini-color-box" style="background: ${palette.colors[4].hexCode};">
+    <div class="mini-color-box" id="4" style="background: ${palette.colors[4].hexCode};">
     </div>
     <img id="trashIcon" src="assets/trash-can-icon.svg">
     `
@@ -80,7 +81,7 @@ function addNewMiniBox() {
 function savePalette() {
   if (palette.isSaved) {
     return;
-  }
+  };
   paletteToSave.push(palette);
   palette.changeSavedState();
   addNewMiniBox();
