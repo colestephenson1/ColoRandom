@@ -19,6 +19,7 @@ window.addEventListener('load', displayNewPalette);
 newPaletteButton.addEventListener('click', displayNewPalette);
 paletteContainer.addEventListener('click', lockColor);
 savePaletteButton.addEventListener('click', savePalette);
+savedPaletteSection.addEventListener('click', deleteSavedPalette)
 
 //functions
 function paletteGenerator() {
@@ -71,12 +72,10 @@ function addNewMiniBox() {
     </div>
     <div class="mini-color-box" id="4" style="background: ${palette.colors[4].hexCode};">
     </div>
-    <img id="trashIcon" src="assets/trash-can-icon.svg">
+    <img class="trash-bin" id="trashIcon" src="assets/trash-can-icon.svg">
     `
     savedPaletteSection.innerHTML += newMiniBox;
-
-}
-
+};
 
 function savePalette() {
   if (palette.isSaved) {
@@ -85,5 +84,10 @@ function savePalette() {
   paletteToSave.push(palette);
   palette.changeSavedState();
   addNewMiniBox();
+};
 
-}
+function deleteSavedPalette(e) {
+  if (e.target.classList.contains("trash-bin")) {
+      e.target.closest("div").remove();
+  };
+};

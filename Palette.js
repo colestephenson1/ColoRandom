@@ -21,13 +21,13 @@ class Palette {
 
   changeSavedState() {
     this.isSaved = true;
-  }
+  };
 
   resetSavedState(){
     this.isSaved = false
-  }
+  };
 
   updateID(){
     this.id = Date.now()
-  }
+  };
 };
