@@ -71,6 +71,7 @@ h2 {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  padding: 8px;
 }
 
 .box-info {

@@ -41,7 +41,7 @@ function lockColor(e) {
   for (let i = 0; i < palette.colors.length; i++) {
     if (palette.colors[i].hexCode === e.target.id) {
       palette.colors[i].toggleLock();
-    }
+    };
     if (palette.colors[i].locked === true) {
       lockAndUnlockIcon[i].src ="./assets/lock-icon.svg";
     } else {
