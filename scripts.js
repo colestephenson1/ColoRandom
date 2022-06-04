@@ -19,20 +19,22 @@ window.addEventListener('load', displayNewPalette);
 newPaletteButton.addEventListener('click', displayNewPalette);
 paletteContainer.addEventListener('click', lockColor);
 savePaletteButton.addEventListener('click', savePalette);
+savedPaletteSection.addEventListener('click', deleteSavedPalette)
 
 //functions
 function paletteGenerator() {
-  palette = new Palette;
+  palette.updateID();
   palette.newColorInstance(5);
 };
 
 function displayNewPalette() {
-  shuffleColor();
+  palette.resetSavedState();
   paletteGenerator();
+  shuffleColor();
     for(var i = 0; i < palette.colors.length; i++) {
       colorBoxes[i].style.background = hexCodes[i].innerText = lockAndUnlockIcon[i].id  = palette.colors[i].hexCode;
     };
-  console.log(palette);
+  // console.log(palette);
 };
 
 function lockColor(e) {
@@ -59,30 +61,39 @@ function shuffleColor() {
 
 function addNewMiniBox() {
   var newMiniBox =
-  `<div class="mini-color-container">
-    <div class="mini-color-box" style="background: ${palette.colors[0].hexCode};">
+  `<div class="mini-color-container id="${palette.id}">
+    <div class="mini-color-box" id="0" style="background: ${palette.colors[0].hexCode};">
     </div>
-    <div class="mini-color-box" style="background: ${palette.colors[1].hexCode};">
+    <div class="mini-color-box" id="1" style="background: ${palette.colors[1].hexCode};">
     </div>
-    <div class="mini-color-box" style="background: ${palette.colors[2].hexCode};">
+    <div class="mini-color-box" id="2" style="background: ${palette.colors[2].hexCode};">
     </div>
-    <div class="mini-color-box" style="background: ${palette.colors[3].hexCode};">
+    <div class="mini-color-box" id="3" style="background: ${palette.colors[3].hexCode};">
     </div>
-    <div class="mini-color-box" style="background: ${palette.colors[4].hexCode};">
+    <div class="mini-color-box" id="4" style="background: ${palette.colors[4].hexCode};">
     </div>
-    <img id="trashIcon" src="assets/trash-can-icon.svg">
+    <img class="trash-bin" id="trashIcon" src="assets/trash-can-icon.svg">
     `
     savedPaletteSection.innerHTML += newMiniBox;
-
-}
-
+};
 
 function savePalette() {
   if (palette.isSaved) {
     return;
-  }
+  };
   paletteToSave.push(palette);
   palette.changeSavedState();
   addNewMiniBox();
+};
 
-}
+function deleteSavedPalette(e) {
+  console.log(e.target.parentElement);
+  if (e.target.classList.contains("trash-bin")) {
+    e.target.closest("div").remove();
+  };
+  for (let i = 0; i < paletteToSave.length; i++) {
+    if (e.target.parentElement.id == ` ${paletteToSave[i].id}`) {
+      console.log("hello");
+    }
+  }
+};
