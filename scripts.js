@@ -34,7 +34,7 @@ function displayNewPalette() {
     for(var i = 0; i < palette.colors.length; i++) {
       colorBoxes[i].style.background = hexCodes[i].innerText = lockAndUnlockIcon[i].id  = palette.colors[i].hexCode;
     };
-  console.log(palette);
+  // console.log(palette);
 };
 
 function lockColor(e) {
@@ -61,7 +61,7 @@ function shuffleColor() {
 
 function addNewMiniBox() {
   var newMiniBox =
-  `<div class="mini-color-container">
+  `<div class="mini-color-container id="${palette.id}">
     <div class="mini-color-box" id="0" style="background: ${palette.colors[0].hexCode};">
     </div>
     <div class="mini-color-box" id="1" style="background: ${palette.colors[1].hexCode};">
@@ -87,7 +87,13 @@ function savePalette() {
 };
 
 function deleteSavedPalette(e) {
+  console.log(e.target.parentElement);
   if (e.target.classList.contains("trash-bin")) {
-      e.target.closest("div").remove();
+    e.target.closest("div").remove();
   };
+  for (let i = 0; i < paletteToSave.length; i++) {
+    if (e.target.parentElement.id == ` ${paletteToSave[i].id}`) {
+      console.log("hello");
+    }
+  }
 };
