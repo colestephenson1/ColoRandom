@@ -50,4 +50,4 @@ Visit our published ColoRandoM Site! [here](https:)
  - [Andrew Miller](https://github.com/andrewmiller45)
 
 ## Project Specs
-  - The project spec & rubric can be found ![here](https://frontend.turing.edu/projects/module-1/colorandom-v2.html)
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/colorandom-v2.html)
