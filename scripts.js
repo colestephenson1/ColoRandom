@@ -61,7 +61,7 @@ function shuffleColor() {
 
 function addNewMiniBox() {
   var newMiniBox =
-  `<div class="mini-color-container id="${palette.id}">
+  `<div class="mini-color-container" id="${palette.id}">
     <div class="mini-color-box" id="0" style="background: ${palette.colors[0].hexCode};">
     </div>
     <div class="mini-color-box" id="1" style="background: ${palette.colors[1].hexCode};">
@@ -87,13 +87,13 @@ function savePalette() {
 };
 
 function deleteSavedPalette(e) {
-  console.log(e.target.parentElement);
   if (e.target.classList.contains("trash-bin")) {
     e.target.closest("div").remove();
   };
   for (let i = 0; i < paletteToSave.length; i++) {
-    if (e.target.parentElement.id == ` ${paletteToSave[i].id}`) {
-      console.log("hello");
-    }
-  }
+    if (paletteToSave[i].id == e.target.parentElement.id) {
+      paletteToSave[i].resetSavedState()
+      paletteToSave.splice(i, 1)   
+    }; 
+  };
 };
