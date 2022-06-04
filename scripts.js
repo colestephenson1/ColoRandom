@@ -72,7 +72,7 @@ function addNewMiniBox() {
     </div>
     <div class="mini-color-box" id="4" style="background: ${palette.colors[4].hexCode};">
     </div>
-    <img class="trash-bin" id="trashIcon" src="assets/trash-can-icon.svg">
+    <img class="trash-bin" id="trashIcon" src="assets/trash-can-icon.svg" alt="trash icon">
     `
     savedPaletteSection.innerHTML += newMiniBox;
 };
