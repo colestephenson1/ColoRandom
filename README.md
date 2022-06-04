@@ -21,16 +21,18 @@
   - CSS
 
 ## Illustrations
-- [Excalidraw](https://excalidraw.com/#json=Ne5t48nODZKeReq-sQmCp,wQB1dUYyjoPyTvTmurQozw)
+- [Excalidraw](https://excalidraw.com/#json=KWBogIGS9G91EqNygciYB,IqJaZ6i1kzIMGtXIOMbyGQ)
 
 ## Features
-- 
-- 
+- Randomize a color palette
+- Lock a color you enjoy and randomize the other five colors
+- Save and remove from your saved palettes
+
 ## Deployed Page
 Visit our published ColoRandoM Site! [here](https:)
 
 ## Possible Future Extensions
-  - A ...
+  - Toggling on a themed color palette
 
 ## Set Up
 1. Fork this repo
