@@ -19,11 +19,11 @@ class Palette {
     return newColor
   };
 
-  changeSavedState() {
+  changeIsSavedState() {
     this.isSaved = true;
   };
 
-  resetSavedState(){
+  resetIsSavedState(){
     this.isSaved = false
   };
 

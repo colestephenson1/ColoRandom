@@ -63,8 +63,6 @@ h2 {
   height: 40px;
   border: solid black;
   border-width: medium;
-
-
 }
 
 .mini-color-container {
@@ -103,12 +101,9 @@ h2 {
   box-shadow: 3px 3px;
 }
 
-
 .new-palette-button:hover, .save-palette-button:hover, #trashIcon:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
-
-
 
 .hidden {
 	display: none;

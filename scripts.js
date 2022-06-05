@@ -5,13 +5,10 @@ var newPaletteButton = document.querySelector('.new-palette-button');
 var savePaletteButton = document.querySelector('.save-palette-button');
 var lockAndUnlockIcon = document.querySelectorAll('.unlock-icon');
 var paletteContainer = document.querySelector('.palette-container');
-var miniColorBoxes = document.querySelectorAll('.mini-color-box');
 var savedPaletteSection = document.querySelector('.saved-palettes');
-var miniColorContainer = document.querySelector('.mini-color-container')
 
 //global variables
 var palette = new Palette();
-var color = new Color();
 var paletteToSave = [];
 
 //event listeners
@@ -19,7 +16,7 @@ window.addEventListener('load', displayNewPalette);
 newPaletteButton.addEventListener('click', displayNewPalette);
 paletteContainer.addEventListener('click', lockColor);
 savePaletteButton.addEventListener('click', savePalette);
-savedPaletteSection.addEventListener('click', deleteSavedPalette)
+savedPaletteSection.addEventListener('click', deleteSavedPalette);
 
 //functions
 function paletteGenerator() {
@@ -28,13 +25,12 @@ function paletteGenerator() {
 };
 
 function displayNewPalette() {
-  palette.resetSavedState();
+  palette.resetIsSavedState();
   paletteGenerator();
   shuffleColor();
     for(var i = 0; i < palette.colors.length; i++) {
       colorBoxes[i].style.background = hexCodes[i].innerText = lockAndUnlockIcon[i].id  = palette.colors[i].hexCode;
     };
-  // console.log(palette);
 };
 
 function lockColor(e) {
@@ -72,8 +68,7 @@ function addNewMiniBox() {
     </div>
     <div class="mini-color-box" id="4" style="background: ${palette.colors[4].hexCode};">
     </div>
-    <img class="trash-bin" id="trashIcon" src="assets/trash-can-icon.svg" alt="trash icon">
-    `
+    <img class="trash-bin" id="trashIcon" src="assets/trash-can-icon.svg" alt="trash icon">`;
     savedPaletteSection.innerHTML += newMiniBox;
 };
 
@@ -82,7 +77,7 @@ function savePalette() {
     return;
   };
   paletteToSave.push(palette);
-  palette.changeSavedState();
+  palette.changeIsSavedState();
   addNewMiniBox();
 };
 
@@ -92,8 +87,8 @@ function deleteSavedPalette(e) {
   };
   for (let i = 0; i < paletteToSave.length; i++) {
     if (paletteToSave[i].id == e.target.parentElement.id) {
-      paletteToSave[i].resetSavedState()
-      paletteToSave.splice(i, 1)   
-    }; 
+      paletteToSave[i].resetIsSavedState();
+      paletteToSave.splice(i, 1);
+    };
   };
 };
