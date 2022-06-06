@@ -23,11 +23,11 @@ class Palette {
     this.isSaved = true;
   };
 
-  resetIsSavedState(){
-    this.isSaved = false
+  resetIsSavedState() {
+    this.isSaved = false;
   };
 
-  updateID(){
-    this.id = Date.now()
+  updateID() {
+    this.id = Date.now();
   };
 };
