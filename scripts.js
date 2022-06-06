@@ -79,6 +79,7 @@ function savePalette() {
   paletteToSave.push(palette);
   palette.changeIsSavedState();
   addNewMiniBox();
+  displayNewPalette();
 };
 
 function deleteSavedPalette(e) {
