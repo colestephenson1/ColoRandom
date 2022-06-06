@@ -8,14 +8,65 @@ body {
 	align-content: stretch;
   height: 900px;
   font-family: 'Comic Sans', monospace;
+  background: linear-gradient(45deg, #Ff3a00,#Ff9d00, #E4ff00, #31ff00, #00ffd2, #7000ff, #F600ff, #Ff0070);
 }
 
 h1 {
   font-size: 100px;
+  color: white;
+  text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
 }
 
 h2 {
   font-size: 40px;
+  color: white;
+  text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
 }
 
 .main-container {
@@ -27,6 +78,7 @@ h2 {
 	align-items: center;
 	align-content: center;
   height: 100%;
+  margin-top: -150px;
 }
 
 .saved-palettes {
@@ -49,6 +101,10 @@ h2 {
 	align-items: center;
 	align-content: center;
   width: 1000px;
+  background-color: white;
+  padding-top: 25px;
+  border: solid black 5px;
+  border-radius: 10px;
 }
 
 .color-box {
@@ -61,8 +117,9 @@ h2 {
 .mini-color-box {
   width: 40px;
   height: 40px;
-  border: solid black;
   border-width: medium;
+  border: solid black 5px;
+  border-radius: 10px;
 }
 
 .mini-color-container {
@@ -70,6 +127,9 @@ h2 {
   justify-content: space-evenly;
   width: 100%;
   padding: 8px;
+  /* background-color: white;
+  padding-top: 25px
+  border: solid black 5px; */
 }
 
 .box-info {
