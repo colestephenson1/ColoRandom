@@ -127,9 +127,6 @@ h2 {
   justify-content: space-evenly;
   width: 100%;
   padding: 8px;
-  /* background-color: white;
-  padding-top: 25px
-  border: solid black 5px; */
 }
 
 .box-info {
@@ -162,7 +159,7 @@ h2 {
 }
 
 .new-palette-button:hover, .save-palette-button:hover, #trashIcon:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  box-shadow: 0 0 11px rgba(0,0,0,.75);
 }
 
 .hidden {
