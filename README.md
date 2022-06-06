@@ -1,4 +1,5 @@
 # ColoRandoM
+<img width="130" alt="ColoRandom-logo" src="https://user-images.githubusercontent.com/96998327/172249456-d3b69e5a-1cfe-44a8-a61c-2d4889d19782.png">
 
 ## Table of Contents
   - [Introduction](#introduction)
@@ -12,8 +13,9 @@
   - [Sources](#sources)
   - [Contributors](#contributors)
   - [Project Specs](#project-specs)
+
 ## Introduction
-  - The purpose of this project was to put our newly gained skills in JS, HTML, and CSS to build a color palette randomizer.  We worked as a team of four to match a comp and build functionality and styling into something a user might enjoy engaging with.  
+  - The purpose of this project was to put our newly gained skills in JS, HTML, and CSS to build a color palette randomizer.  We worked as a team of four to match a comp and build functionality and styling into something a user might enjoy engaging with.  Visit ColoRandom to find a palette of 5 randomly generated colors with the corresponding hex codes.  
 
 ## Technologies
   - Javascript
