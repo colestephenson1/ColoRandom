@@ -29,7 +29,7 @@
 - Save and remove from your saved palettes
 
 ## Deployed Page
-Visit our published ColoRandoM Site! [here](https:)
+Visit our published ColoRandoM Site! [here](https://colestephenson1.github.io/ColoRandom/)
 
 ## Possible Future Extensions
   - Toggling on a themed color palette
