@@ -13,7 +13,7 @@
   - [Contributors](#contributors)
   - [Project Specs](#project-specs)
 ## Introduction
-  - The purpose of this project was to ...
+  - The purpose of this project was to put our newly gained skills in JS, HTML, and CSS to build a color palette randomizer.  We worked as a team of four to match a comp and build functionality and styling into something a user might enjoy engaging with.  
 
 ## Technologies
   - Javascript
